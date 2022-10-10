@@ -12,3 +12,12 @@ class COLUMNS(Enum):
 class SESSION_TYPE(Enum):
     MAIN = "Session"
     SUB = "Sub"
+
+class QUERY(Enum):
+    DATE = "date"
+    STIME = "time_start"
+    ETIME = "time_end"
+    TITLE = "title"
+    LOCATION = "location"
+    DESCRIPTION = "description"
+    SPEAKER = "speaker"
