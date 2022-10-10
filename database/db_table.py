@@ -120,6 +120,8 @@ class db_table:
         # Note that columns are formatted into the string without using sqlite safe substitution mechanism
         # The reason is that sqlite does not provide substitution mechanism for columns parameters
         # In the context of this project, this is fine (no risk of user malicious input)
+
+        # NOTE: There are some inputs that recreate malicious input in the xls file
         cursor = self.db_conn.cursor()
         cursor.execute("INSERT INTO %s (%s) VALUES (%s)" % (self.name, columns_query, values_query))
         cursor.close()
